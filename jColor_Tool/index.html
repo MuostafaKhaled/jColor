@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link href="style.css" rel='stylesheet' />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li> <a href="#" id="mainPage">Main</a></li>
+            <li> <a href="#" id="gradientPage">Gradient</a></li>
+            <li> <a href="#" id="mixerPage">Mixer</a></li>
+            <li> <a href="#" id="flatPage">Flat Colors</a></li>
+        </ul>
+    </nav>
+    <div class="container" id="main">
+        <div class="details">
+            <div class="details-container">
+                <span class="flex-item">
+                    <span class="head"> Enter Color : <span class="small"> Hex - Rgb - Hsl - Hsv - Hwb - Cmyk : </span>
+                    </span>
+                    <input type="text" id="enter" class="enter" value="#FFA500">
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Name </span> <span class="property" id="name"> </span>
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Rgb </span> <span class="property" id="rgb"> </span>
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Hex </span> <span class="property" id="hex"> </span>
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Hsl </span> <span class="property" id="hsl"> </span>
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Hsv </span> <span class="property" id="hsv"> </span>
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Hwb </span> <span class="property" id="hwb"> </span>
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Cmyk </span> <span class="property" id="cmyk"> </span>
+                </span>
+            </div>
+            <button class="btn copy" id="copy">
+                Copy to clipboard
+            </button>
+            <button class="btn rand" id="rand">
+                Random
+            </button>
+        </div>
+        <div class="background" id="colorBackground">
+            <span id='bgColor'></span>
+        </div>
+    </div>
+    <div class="colorDegrees" id="main2">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Lighter</td>
+                    <td>Hex</td>
+                    <td>Rgb</td>
+                    <td>Percent</td>
+                    <td>Rgb</td>
+                    <td>Hex</td>
+                    <td>Darker</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Color</td>
+                    <td>Hue</td>
+                    <td>Hsl</td>
+                    <td>Rgb</td>
+                    <td>Hex</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Color</td>
+                    <td>Saturation</td>
+                    <td>Hsl</td>
+                    <td>Rgb</td>
+                    <td>Hex</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Color</td>
+                    <td>Lightness</td>
+                    <td>Hsl</td>
+                    <td>Rgb</td>
+                    <td>Hex</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="container grad" id="gradient">
+        <div class="details">
+            <div class="details-container">
+                <span class="flex-item">
+                    <span class="head"> Enter First Color : </span>
+                    <input type="text" id="gColor" class="enter enter1" value="#FFA500">
+                    <input type="text" id="gVal" class="enter enter1" value="0">
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Enter Second Color : </span>
+                    <input type="text" id="gColor2" class="enter enter2" value="#FFA500">
+                    <input type="text" id="gVal2" class="enter enter2" value="100">
+                </span>
+                <div class="buttons flex-item">
+                    <button class="btn right" id="right"> To right </button>
+                    <button class="btn left" id="left"> To left </button>
+                    <button class="btn top" id="top"> To top </button>
+                    <button class="btn bottom" id="bottom"> To bottom </button>
+                    <button class="btn top-right" id="top-right"> To top-right </button>
+                    <button class="btn top-left" id="top-left"> To top-left </button>
+                    <button class="btn bottom-right" id="bottom-right"> To bottom-right </button>
+                    <button class="btn bottom-left" id="bottom-left"> To bottom-left </button>
+                    <div class="btns">
+                        <button class="btn copy2" id="copy2">Copy clipboard</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gradient" id="grdBg">
+        </div>
+    </div>
+    <div class="container mixer" id="mixer">
+        <div class="details">
+            <div class="details-container">
+                <span class="flex-item">
+                    <span class="head"> Enter Color 1 : </span> </span>
+                <input type="text" id="mixerColor1" class="enter mix1" value="#FFA500">
+                </span>
+                <span class="flex-item">
+                    <span class="head"> Enter Color 2 : </span> </span>
+                <input type="text" id="mixerColor2" class="enter mix2" value="#FFA500">
+                </span>
+
+            </div>
+        </div>
+        <div class="colorDegrees mixer" id="mixerTable">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Color</td>
+                        <td>Hex</td>
+                        <td>Rgb</td>
+                    </tr>
+                </thead>
+                <tbody id="mxTbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class='container flat' id="flatColors">
+        <div class="flat-colors">
+            <div style="background : #F9EBEA">POMEGRANATE</div>
+            <div style="background : #FADBD8">ALIZARIN</div>
+            <div style="background : #9B59B6">AMETHYST</div>
+            <div style="background : #8E44AD">WISTERIA</div>
+            <div style="background : #7FB3D5">BELIZE HOLE</div>
+            <div style="background : #AED6F1">PETER RIVER</div>
+            <div style="background : #1ABC9C">TURQUOISE</div>
+            <div style="background : #73C6B6">GREEN SEA</div>
+            <div style="background : #1E8449">NEPHRITIS</div>
+            <div style="background : #2ECC71">EMERALD</div>
+            <div style="background : #F7DC6F">SUNFLOWER</div>
+            <div style="background : #F39C12">ORANGE</div>
+            <div style="background : #E67E22">CARROT</div>
+            <div style="background : #D35400">PUMPKIN</div>
+            <div style="background : #ECF0F1">CLOUDS</div>
+            <div style="background : #BDC3C7">SILVER</div>
+            <div style="background : #95A5A6">CONCRETE</div>
+            <div style="background : #7F8C8D">ASBESTOS</div>
+            <div style="background : #34495E">WET ASPHALT</div>
+            <div style="background : #212F3D">MIDNIGHT BLUE</div>
+        </div>
+    </div>
+
+    <script src='jColor.min.js'></script>
+    <script src='app.js'></script>
+</body>
+
+</html>
