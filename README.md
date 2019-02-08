@@ -7,7 +7,7 @@ jColor.js is a fast , small and non-dependencies js library for converting betwe
 
 # Including in browser :
 
-  you can download it from here [jColor.js](https://www.google.com)
+  you can download it from here [jColor.js](https://raw.githubusercontent.com/MuostafaKhaled/MuostafaKhaled.github.io/master/jColor.min.js)
   ```html
     <script type="text/javascript" src = "jcolor.js"></script>
   ```
