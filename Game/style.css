@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    font-family: Cairo , Helvetica ,Arial , Tahoma;
+}
+body{
+    background:#090a0a;
+    margin:0;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.difficulty{
+    width:30vw;
+    height:30vw;
+    display:grid;
+    background:beige;
+}
+.difficulty div{
+    text-align: center;
+    font-size:.8em;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.difficulty h1{
+    font-size:1em;
+}
+h1{
+    text-align: center;
+    font-weight:bold;
+}
+.container{
+    height:70vw;
+    width:70vw;
+    border:1px solid #090a0a90;
+}
+.block{
+    width:100%;
+    height:100%;
+    border-radius:1px;
+    transition: all ease-in-out .4s;
+}
+.block:not(.static){
+    cursor:pointer;
+}
+.static{
+    position:relative;
+}
+.selected{
+    transform: scale(1.2);
+    z-index:1000;
+    transition: all ease-in-out .4s;
+}
+.static::after{
+    content:'';
+    position:absolute;
+    width:20%;
+    height:20%;
+    top:40%;
+    left:40%;
+    border-radius: 50%;
+    background:#090a0a;
+}
+.congrats{
+    transform: scale(0);
+    transition: all ease-in-out .5s;
+    background:beige;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+    width:40vw;
+    height:20vw;
+    position: absolute;
+}
+.congrats h1{
+    flex-basis: 100%;
+    text-align: center;
+    font-weight:bold;
+    color: #090a0a;
+}
+.congrats p{
+    flex-basis: 100%;
+    text-align: center;
+    position: relative;
+    top:-3vw;
+}
+.congrats span{
+    position: relative;
+    top:-2vw;
+    background:#e74;
+    padding:1vw;
+    cursor: pointer;
+    color:beige;
+}
+pre{
+    color:#090a0a;
+    background:beige;
+    cursor: pointer;
+    position: absolute;
+    width:30vw;
+    height:10vw;
+    top: 0%;
+    font-size:3vw;
+    font-weight: bold;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    left:calc(50% - 15vw);
+    transform: scale(0);
+}
+@media screen and (min-width:1080px){
+    .container{
+        height:50vw;
+        width:50vw;
+    }
+    pre{
+        width:10vw;
+        height:5vw;
+        font-size:1.3vw;
+        top:calc(50% - 4vw);
+        left:80%;
+    }
+    .difficulty div{
+        font-size:2em;
+    }
+    .difficulty h1{
+        font-size:3em;
+    }
+}
